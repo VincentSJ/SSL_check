@@ -1,0 +1,26 @@
+{
+  "name": "ssl_check",
+  "version": "0.0.1",
+  "description": "Check for ssl certificates and mixed content on the muzkult sites",
+  "main": "core.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VincentSJ/SSL_check.git"
+  },
+  "keywords": [
+    "muzkult",
+    "ssl",
+    "mixed",
+    "content",
+    "node"
+  ],
+  "author": "VincentSJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VincentSJ/SSL_check/issues"
+  },
+  "homepage": "https://github.com/VincentSJ/SSL_check#readme"
+}
