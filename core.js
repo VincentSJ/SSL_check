@@ -12,7 +12,7 @@ function getCert(url) {
         console.log( url + ' - No certificate' );
     });
 
-    res.end();
+    req.end();
 }
 
 let params = process.argv[2].split(',');
