@@ -1,6 +1,6 @@
 {
   "name": "ssl_check",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Check for ssl certificates and mixed content on the muzkult sites",
   "main": "core.js",
   "scripts": {
