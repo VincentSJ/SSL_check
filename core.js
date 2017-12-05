@@ -2,7 +2,7 @@ const https = require('https');
 //const fs = require('fs');
 
 let warnCount = 0,
-errCount = 0;
+    errCount = 0;
 
 function getCertificateInfo(url) {
     let options = {
@@ -10,20 +10,20 @@ function getCertificateInfo(url) {
         method: 'GET'
     };
 
-    var req = https.request(options, function(res) {
+    let req = https.request(options, function(res) {
     let siteCert = res.connection.getPeerCertificate(true).issuer.O,
-    body = '';
+        body = '';
 
     res.on("data", function(chunk) {
         body += chunk.toString(); //combine all cnunks in one
     }).on("end", function() {
         //console.log('Cert - ' + url + ' - ' + siteCert);
 
-        const src = /src="http:/;
-        const href = /href="http:/;
+        const src = /src="http:/,
+              href = /href="http:/;
 
         let isSrc = src.test(body),
-        isHref = href.test(body);
+            isHref = href.test(body);
 
         if ( isSrc && !isHref ) {
             console.log('\x1b[31mError\x1b[0m - ' + url + ' - Mixed content detected');
@@ -58,7 +58,7 @@ function getCertificateInfo(url) {
             getCertificateInfo(params.shift())
         } else {
             console.log('Work\'s done with: ' + errCount + ' error(s) and ' + warnCount + ' warning(s)');
-            }
+        }
     });
 
     }).on('error', function(err) {
@@ -73,6 +73,7 @@ let params = [];
 for ( let i = 2; i < process.argv.length; i++) {
     params.push(process.argv[i].replace(/,/g, ''));
 }
+
 console.log('Url\'s number: ' + params.length)
 
 getCertificateInfo(params.shift());
