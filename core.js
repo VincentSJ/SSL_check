@@ -19,7 +19,7 @@ function getCertificateInfo(url) {
         }).on("end", function() {
             //console.log('Cert - ' + url + ' - ' + siteCert);
 
-            const src = /src="http:\/\/[^"']/;
+            const src = /src="http:\/\/[^"']/,
                   href = /href="http:\/\/(?!it-clever\.ru)/;
 
             let isSrc = src.test(body),
