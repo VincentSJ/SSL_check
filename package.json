@@ -1,7 +1,7 @@
 {
   "name": "ssl_check",
   "version": "0.0.5",
-  "description": "Check for ssl certificates and mixed content on the muzkult sites",
+  "description": "Check for ssl certificates and mixed content",
   "main": "core.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
